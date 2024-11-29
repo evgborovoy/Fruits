@@ -14,6 +14,7 @@ struct FruitRowView: View {
     // MARK: - Body
     var body: some View {
         HStack{
+            // FRUIT Image
             Image(fruit.image)
                 .renderingMode(.original)
                 .resizable()
@@ -24,9 +25,11 @@ struct FruitRowView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 8))
             
             VStack(alignment: .leading, spacing: 5) {
+                // FRUIT Title
                 Text(fruit.title)
                     .font(.title2.weight(.bold))
                 
+                // FRUIT Headline
                 Text(fruit.headline)
                     .font(.caption)
                     .foregroundStyle(.secondary)
